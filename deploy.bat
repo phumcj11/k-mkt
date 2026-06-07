@@ -2,7 +2,7 @@
 chcp 65001 > nul
 echo.
 echo ╔══════════════════════════════════════╗
-echo ║     K-MKT — Push + Deploy VPS       ║
+echo ║   กาญจน์ตลาด — Push + Deploy VPS    ║
 echo ╚══════════════════════════════════════╝
 echo.
 

@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           btn.textContent = '✓ ส่งข้อมูลแล้ว';
           btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-          showToast('ขอบคุณ! ทีมงาน K-MKT จะติดต่อกลับภายใน 24 ชั่วโมง 🙏');
+          showToast('ขอบคุณ! ทีมงานกาญจน์ตลาดจะติดต่อกลับภายใน 24 ชั่วโมง 🙏');
           form.reset();
           setTimeout(() => {
             btn.textContent = orig;

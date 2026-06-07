@@ -2,7 +2,7 @@
 chcp 65001 > nul
 echo.
 echo ╔══════════════════════════════════╗
-echo ║     K-MKT — Push to GitHub      ║
+echo ║   กาญจน์ตลาด — Push to GitHub   ║
 echo ╚══════════════════════════════════╝
 echo.
 

@@ -11,8 +11,8 @@
     "@context": "https://schema.org",
     "@type": "MarketingAgency",
     "@id": "https://k-mkt.com/#organization",
-    "name": "กาญจน์ตลาด (K-MKT)",
-    "alternateName": "K-MKT กาญจนบุรี",
+    "name": "กาญจน์ตลาด",
+    "alternateName": "K-MKT กาญจน์ตลาด",
     "url": "https://k-mkt.com",
     "logo": {
       "@type": "ImageObject",
@@ -64,7 +64,7 @@
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "บริการการตลาด K-MKT",
+      "name": "บริการการตลาดกาญจน์ตลาด",
       "itemListElement": [
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO กาญจนบุรี" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads" } },
@@ -80,7 +80,7 @@
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "K-MKT กาญจน์ตลาด",
+    "name": "กาญจน์ตลาด",
     "url": "https://k-mkt.com",
     "potentialAction": {
       "@type": "SearchAction",
@@ -170,7 +170,7 @@
       },
       "publisher": {
         "@type": "Organization",
-        "name": "K-MKT กาญจน์ตลาด",
+        "name": "กาญจน์ตลาด",
         "logo": {
           "@type": "ImageObject",
           "url": "https://k-mkt.com/assets/images/logo.png"
