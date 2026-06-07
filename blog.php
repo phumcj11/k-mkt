@@ -2,8 +2,15 @@
 require_once __DIR__ . '/includes/db.php';
 require_once __DIR__ . '/includes/helpers.php';
 
-$featured = db()->query("SELECT * FROM blog_posts WHERE status='published' AND is_featured=1 ORDER BY published_at DESC LIMIT 1")->fetch();
-$posts = db()->query("SELECT * FROM blog_posts WHERE status='published' AND is_featured=0 ORDER BY published_at DESC")->fetchAll();
+$featured = null;
+$posts = [];
+$dbError = false;
+try {
+    $featured = db()->query("SELECT * FROM blog_posts WHERE status='published' AND is_featured=1 ORDER BY published_at DESC LIMIT 1")->fetch();
+    $posts = db()->query("SELECT * FROM blog_posts WHERE status='published' AND is_featured=0 ORDER BY published_at DESC")->fetchAll();
+} catch (Throwable $e) {
+    $dbError = true;
+}
 $activePage = 'blog';
 ?>
 <!DOCTYPE html>
@@ -39,6 +46,12 @@ $activePage = 'blog';
 
 <section class="section section-light">
   <div class="container">
+
+    <?php if ($dbError): ?>
+    <div style="background:#FEE2E2;border:1px solid #FECACA;border-radius:12px;padding:24px;text-align:center;margin-bottom:32px;">
+      <p style="color:#991B1B;">ระบบ Database กำลังตั้งค่า — กรุณารอ deploy หรือติดต่อผู้ดูแล</p>
+    </div>
+    <?php endif; ?>
 
     <?php if ($featured): ?>
     <div style="background:rgba(212,175,55,0.04);border:1px solid rgba(212,175,55,0.2);border-radius:20px;overflow:hidden;margin-bottom:48px;" class="reveal-up">

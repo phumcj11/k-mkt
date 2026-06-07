@@ -46,13 +46,22 @@ if [ -f .htaccess ]; then
   sed -i 's|RewriteBase /k-mkt/|RewriteBase /|g' .htaccess
 fi
 
+MYSQL="mysql"
+command -v mysql >/dev/null 2>&1 || MYSQL="/usr/local/mysql/bin/mysql"
+
+echo "==> ทดสอบเชื่อมต่อ Database pcj_kmkt"
+if ! $MYSQL -u pcj_kmkt -p"${DB_PASS}" pcj_kmkt -e "SELECT 1" >/dev/null 2>&1; then
+  echo "ERROR: เชื่อมต่อ MySQL ไม่ได้ — ตรวจรหัสผ่านใน deploy.secrets"
+  exit 1
+fi
+
 echo "==> Database migrate (schema)"
-mysql -u pcj_kmkt -p"${DB_PASS}" pcj_kmkt < database/schema.sql
+$MYSQL -u pcj_kmkt -p"${DB_PASS}" pcj_kmkt < database/schema.sql
 
 echo "==> Database seed (ถ้ายังไม่มีข้อมูล)"
-USER_COUNT=$(mysql -u pcj_kmkt -p"${DB_PASS}" pcj_kmkt -N -e "SELECT COUNT(*) FROM users" 2>/dev/null || echo "0")
+USER_COUNT=$($MYSQL -u pcj_kmkt -p"${DB_PASS}" pcj_kmkt -N -e "SELECT COUNT(*) FROM users" 2>/dev/null || echo "0")
 if [ "$USER_COUNT" = "0" ]; then
-  mysql -u pcj_kmkt -p"${DB_PASS}" pcj_kmkt < database/seed.sql
+  $MYSQL -u pcj_kmkt -p"${DB_PASS}" pcj_kmkt < database/seed.sql
   echo "    Seed สำเร็จ (admin / admin123)"
 else
   echo "    ข้าม seed — มีข้อมูลอยู่แล้ว"
@@ -64,8 +73,9 @@ chmod 755 uploads uploads/blog uploads/cases
 chmod 644 uploads/.htaccess 2>/dev/null || true
 chmod +x scripts/deploy-server.sh 2>/dev/null || true
 
-echo "==> ตรวจสอบ PHP"
+echo "==> ตรวจสอบ PHP + health"
 php -r "require 'includes/db.php'; echo 'DB OK: '.DB_NAME.PHP_EOL;"
+curl -sf "https://k-mkt.com/health.php" || true
 
 echo ""
 echo "✅ Deploy สำเร็จ! https://k-mkt.com"

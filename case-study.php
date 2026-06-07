@@ -2,7 +2,13 @@
 require_once __DIR__ . '/includes/db.php';
 require_once __DIR__ . '/includes/helpers.php';
 
-$cases = db()->query("SELECT * FROM case_studies WHERE status='published' ORDER BY sort_order ASC, id DESC")->fetchAll();
+$cases = [];
+$dbError = false;
+try {
+    $cases = db()->query("SELECT * FROM case_studies WHERE status='published' ORDER BY sort_order ASC, id DESC")->fetchAll();
+} catch (Throwable $e) {
+    $dbError = true;
+}
 $activePage = 'case';
 
 function metric_color(string $color): string {
@@ -60,6 +66,12 @@ function metric_border(string $color): string {
 
 <section class="section section-light">
   <div class="container">
+
+    <?php if ($dbError): ?>
+    <div style="background:#FEE2E2;border:1px solid #FECACA;border-radius:12px;padding:24px;text-align:center;margin-bottom:32px;">
+      <p style="color:#991B1B;">ระบบ Database กำลังตั้งค่า — กรุณารอ deploy หรือติดต่อผู้ดูแล</p>
+    </div>
+    <?php endif; ?>
 
     <?php foreach ($cases as $c):
       $metrics = json_decode($c['metrics'] ?? '[]', true) ?: [];
