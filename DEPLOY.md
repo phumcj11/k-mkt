@@ -70,12 +70,12 @@ ssh -i ~/.ssh/id_rsa root@119.59.102.235
 
 ```bash
 # โฟลเดอร์หลัก
-/domains/k-mkt.com/public_html
+/home/pcj/domains/k-mkt.com/public_html
 ```
 
 ตรวจสอบ:
 ```bash
-ls /domains/k-mkt.com/public_html
+ls /home/pcj/domains/k-mkt.com/public_html
 ```
 
 ---
@@ -84,7 +84,7 @@ ls /domains/k-mkt.com/public_html
 
 ```bash
 # ไปที่โฟลเดอร์ domain
-cd /domains/k-mkt.com
+cd /home/pcj/domains/k-mkt.com
 
 # Backup public_html เดิม (ถ้ามี)
 mv public_html public_html_backup_$(date +%Y%m%d_%H%M%S)
@@ -106,7 +106,7 @@ git clone https://github.com/phumcj11/k-mkt.git .
 ssh root@119.59.102.235
 
 # ไปที่ public_html
-cd /domains/k-mkt.com/public_html
+cd /home/pcj/domains/k-mkt.com/public_html
 
 # ตรวจสอบสถานะ
 git status
@@ -131,11 +131,11 @@ find . -type f -exec chmod 644 {} \;
 
 ```bash
 # Backup โฟลเดอร์ก่อน Pull
-cp -r /domains/k-mkt.com/public_html \
-      /domains/k-mkt.com/public_html_backup_$(date +%Y%m%d_%H%M%S)
+cp -r /home/pcj/domains/k-mkt.com/public_html \
+      /home/pcj/domains/k-mkt.com/public_html_backup_$(date +%Y%m%d_%H%M%S)
 
 # หรือ Backup เฉพาะไฟล์สำคัญ
-tar -czf backup_$(date +%Y%m%d).tar.gz /domains/k-mkt.com/public_html
+tar -czf backup_$(date +%Y%m%d).tar.gz /home/pcj/domains/k-mkt.com/public_html
 ```
 
 ---
@@ -147,7 +147,7 @@ tar -czf backup_$(date +%Y%m%d).tar.gz /domains/k-mkt.com/public_html
 ssh root@119.59.102.235
 
 # Step 2: Backup
-cd /domains/k-mkt.com
+cd /home/pcj/domains/k-mkt.com
 tar -czf backup_$(date +%Y%m%d_%H%M%S).tar.gz public_html
 
 # Step 3: Pull
@@ -177,7 +177,7 @@ git push origin main
 
 ### ย้อนกลับจาก Backup
 ```bash
-cd /domains/k-mkt.com
+cd /home/pcj/domains/k-mkt.com
 rm -rf public_html
 cp -r public_html_backup_YYYYMMDD_HHMMSS public_html
 ```
@@ -221,10 +221,11 @@ git checkout abc1234 -- .  # ย้อนไปยัง commit นั้น
 **Server:** root@119.59.102.235
 
 ```
-โฟลเดอร์หลัก: /domains/k-mkt.com/public_html
-GitHub Repo:   https://github.com/phumcj11/k-mkt.git
-Server IP:     119.59.102.235
 SSH User:      root
+Server IP:     119.59.102.235
+Web User:      pcj
+โฟลเดอร์หลัก: /home/pcj/domains/k-mkt.com/public_html
+GitHub Repo:   https://github.com/phumcj11/k-mkt.git
 ```
 
 ถ้า Domain ยังไม่ชี้ DNS:
@@ -256,7 +257,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}  # root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /domains/k-mkt.com/public_html
+            cd /home/pcj/domains/k-mkt.com/public_html
             git pull origin main
             find . -type d -exec chmod 755 {} \;
             find . -type f -exec chmod 644 {} \;
