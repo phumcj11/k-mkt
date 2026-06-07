@@ -20,16 +20,14 @@ git commit -m "Initial commit: K-MKT website with GSAP and SEO"
 
 ### 1.2 เชื่อมต่อ GitHub Repository
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/k-mkt-website.git
+git remote add origin https://github.com/phumcj11/k-mkt.git
 git branch -M main
 git push -u origin main
 ```
 
-> 💡 แทนที่ `YOUR_USERNAME` ด้วย GitHub Username จริงของคุณ
-
 ### 1.3 ถ้าใช้ SSH Key
 ```bash
-git remote add origin git@github.com:YOUR_USERNAME/k-mkt-website.git
+git remote add origin git@github.com:phumcj11/k-mkt.git
 ```
 
 ---
@@ -58,17 +56,12 @@ git commit -m "seo: ปรับ Meta Tags ทุกหน้า"
 ### 3.1 SSH เข้า Server
 
 ```bash
-ssh username@your-server-ip
-```
-
-ตัวอย่าง:
-```bash
-ssh admin@103.xxx.xxx.xxx
+ssh pcj@119.59.102.235
 ```
 
 ถ้าใช้ SSH Key:
 ```bash
-ssh -i ~/.ssh/id_rsa username@your-server-ip
+ssh -i ~/.ssh/id_rsa pcj@119.59.102.235
 ```
 
 ---
@@ -76,13 +69,13 @@ ssh -i ~/.ssh/id_rsa username@your-server-ip
 ### 3.2 โฟลเดอร์ Website บน DirectAdmin
 
 ```bash
-# โฟลเดอร์หลัก (ปรับ username ให้ตรง)
-/home/USERNAME/domains/k-mkt.com/public_html
+# โฟลเดอร์หลัก
+/home/pcj/domains/k-mkt.com/public_html
 ```
 
 ตรวจสอบ:
 ```bash
-ls /home/USERNAME/domains/k-mkt.com/public_html
+ls /home/pcj/domains/k-mkt.com/public_html
 ```
 
 ---
@@ -91,7 +84,7 @@ ls /home/USERNAME/domains/k-mkt.com/public_html
 
 ```bash
 # ไปที่โฟลเดอร์ domain
-cd /home/USERNAME/domains/k-mkt.com
+cd /home/pcj/domains/k-mkt.com
 
 # Backup public_html เดิม (ถ้ามี)
 mv public_html public_html_backup_$(date +%Y%m%d_%H%M%S)
@@ -101,7 +94,7 @@ mkdir public_html
 
 # Clone จาก GitHub
 cd public_html
-git clone https://github.com/YOUR_USERNAME/k-mkt-website.git .
+git clone https://github.com/phumcj11/k-mkt.git .
 ```
 
 ---
@@ -110,10 +103,10 @@ git clone https://github.com/YOUR_USERNAME/k-mkt-website.git .
 
 ```bash
 # SSH เข้า Server
-ssh username@server-ip
+ssh pcj@119.59.102.235
 
 # ไปที่ public_html
-cd /home/USERNAME/domains/k-mkt.com/public_html
+cd /home/pcj/domains/k-mkt.com/public_html
 
 # ตรวจสอบสถานะ
 git status
@@ -151,10 +144,10 @@ tar -czf backup_$(date +%Y%m%d).tar.gz /home/USERNAME/domains/k-mkt.com/public_h
 
 ```bash
 # Step 1: SSH
-ssh username@server-ip
+ssh pcj@119.59.102.235
 
 # Step 2: Backup
-cd /home/USERNAME/domains/k-mkt.com
+cd /home/pcj/domains/k-mkt.com
 tar -czf backup_$(date +%Y%m%d_%H%M%S).tar.gz public_html
 
 # Step 3: Pull
@@ -227,9 +220,9 @@ git checkout abc1234 -- .  # ย้อนไปยัง commit นั้น
 ## 9. DirectAdmin Notes
 
 ```
-โฟลเดอร์หลัก: /home/USERNAME/domains/k-mkt.com/public_html
-Log Files:     /home/USERNAME/logs/
-Error Log:     /home/USERNAME/logs/error.log
+โฟลเดอร์หลัก: /home/pcj/domains/k-mkt.com/public_html
+Log Files:     /home/pcj/logs/
+Error Log:     /home/pcj/logs/error.log
 ```
 
 ถ้า Domain ยังไม่ชี้ DNS:
@@ -257,11 +250,11 @@ jobs:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
+          host: ${{ secrets.SERVER_HOST }}      # 119.59.102.235
+          username: ${{ secrets.SERVER_USER }}  # pcj
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/${{ secrets.SERVER_USER }}/domains/k-mkt.com/public_html
+            cd /home/pcj/domains/k-mkt.com/public_html
             git pull origin main
             find . -type d -exec chmod 755 {} \;
             find . -type f -exec chmod 644 {} \;
