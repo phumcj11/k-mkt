@@ -112,13 +112,15 @@
 </div>
 
 <!-- ==================== HERO ==================== -->
-<section id="hero" style="background-image:url('assets/images/kanchanaburi-hero.jpg');background-size:cover;background-position:center;background-blend-mode:overlay;">
-  <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(11,31,58,0.92) 0%, rgba(11,31,58,0.75) 60%, rgba(11,31,58,0.88) 100%);"></div>
+<section id="hero" style="background-image:url('assets/images/raft-bright.jpg');background-size:cover;background-position:center;">
+  <div class="hero-overlay"></div>
   <div class="hero-bg-grid"></div>
   <div class="hero-orb-1"></div>
   <div class="hero-orb-2"></div>
 
   <div class="container" style="position:relative;z-index:1;padding-top:120px;padding-bottom:80px;">
+    <div class="hero-layout">
+    <div>
     <div class="hero-badge">
       <div class="hero-badge-dot"></div>
       บริษัทการตลาด AI อันดับ 1 สำหรับธุรกิจกาญจนบุรี
@@ -138,7 +140,7 @@
       </div>
     </h1>
 
-    <p class="hero-sub" style="font-size:1.15rem;color:rgba(255,255,255,0.75);max-width:640px;line-height:1.8;margin-bottom:36px;">
+    <p class="hero-sub" style="font-size:1.15rem;max-width:640px;line-height:1.8;margin-bottom:36px;">
       K-MKT ช่วยเจ้าของธุรกิจในกาญจนบุรี วางแผนการตลาด Online, Offline และ AI Marketing เพื่อ<strong style="color:var(--gold);">เพิ่มลูกค้า เพิ่มยอดขาย</strong> และสร้างระบบที่ทำงานแทนคนได้จริง
     </p>
 
@@ -180,17 +182,54 @@
         <div class="stat-label">ประสบการณ์ตลาดกาญจนบุรี</div>
       </div>
     </div>
+    </div>
+
+    <div class="hero-visual reveal-right">
+      <img src="assets/images/marketing-team.jpg" alt="ทีมการตลาด K-MKT กาญจนบุรี" loading="lazy">
+      <div class="hero-visual-badge">
+        <div style="font-size:2rem;">📈</div>
+        <div>
+          <div style="font-weight:800;color:var(--navy);font-size:1.1rem;">+300% ยอดจองเฉลี่ย</div>
+          <div style="font-size:0.82rem;color:var(--text-muted);">ผลลัพธ์จริงจากธุรกิจกาญจนบุรี</div>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
 
   <!-- Scroll Indicator -->
-  <div class="scroll-indicator" style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);">
+  <div class="scroll-indicator" style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);color:var(--text-muted);">
     <span>เลื่อนลง</span>
-    <div class="scroll-indicator-line"></div>
+    <div class="scroll-indicator-line" style="background:linear-gradient(to bottom, var(--text-muted), transparent);"></div>
+  </div>
+</section>
+
+<!-- Visual Strip -->
+<section class="section-sm section-alt" style="padding-top:0;padding-bottom:60px;">
+  <div class="container">
+    <div class="visual-strip stagger-reveal">
+      <a href="marketing-resort-kanchanaburi.html" class="visual-strip-item">
+        <img src="assets/images/resort-pool.jpg" alt="การตลาดรีสอร์ทกาญจนบุรี" loading="lazy">
+        <span>🏝️ การตลาดรีสอร์ท</span>
+      </a>
+      <a href="seo-kanchanaburi.html" class="visual-strip-item">
+        <img src="assets/images/seo-growth-bright.jpg" alt="SEO กาญจนบุรี" loading="lazy">
+        <span>🔍 SEO ติดหน้าแรก Google</span>
+      </a>
+      <a href="ai-marketing.html" class="visual-strip-item">
+        <img src="assets/images/ai-chatbot-bright.jpg" alt="AI Marketing กาญจนบุรี" loading="lazy">
+        <span>🤖 AI Chatbot 24/7</span>
+      </a>
+      <a href="google-map-marketing.html" class="visual-strip-item">
+        <img src="assets/images/google-map-bright.jpg" alt="Google Map Marketing" loading="lazy">
+        <span>🗺️ Google Map ติดอันดับ</span>
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ==================== WHY K-MKT ==================== -->
-<section class="section" style="background:var(--dark);">
+<section class="section section-light">
   <div class="container">
     <div class="section-title text-center reveal-up" style="margin-bottom:60px;">
       <div class="section-tag">✦ ทำไมต้อง K-MKT</div>
@@ -200,42 +239,60 @@
     </div>
 
     <div class="grid-3 stagger-reveal" style="gap:24px;">
-      <div class="service-card reveal-up">
-        <div class="service-icon">🎯</div>
-        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Marketing Strategy</h3>
-        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">วางแผนการตลาดระยะยาวที่ตอบโจทย์ธุรกิจท้องถิ่น รู้จักพฤติกรรมนักท่องเที่ยวกาญจนบุรีอย่างลึกซึ้ง</p>
+      <div class="service-card has-img reveal-up">
+        <img src="assets/images/marketing-team.jpg" alt="วางแผนการตลาดกาญจนบุรี" class="card-img-top" loading="lazy">
+        <div class="card-body">
+          <div class="service-icon">🎯</div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Marketing Strategy</h3>
+          <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">วางแผนการตลาดระยะยาวที่ตอบโจทย์ธุรกิจท้องถิ่น รู้จักพฤติกรรมนักท่องเที่ยวกาญจนบุรีอย่างลึกซึ้ง</p>
+        </div>
       </div>
-      <div class="service-card reveal-up">
-        <div class="service-icon">📢</div>
-        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Performance Ads</h3>
-        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">ยิงแอด Facebook, Google, TikTok ให้ ROI สูงสุด ด้วย AI Optimization และ Data-Driven Strategy</p>
+      <div class="service-card has-img reveal-up">
+        <img src="assets/images/social-ads-bright.jpg" alt="ยิงแอด Facebook Google TikTok" class="card-img-top" loading="lazy">
+        <div class="card-body">
+          <div class="service-icon">📢</div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Performance Ads</h3>
+          <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">ยิงแอด Facebook, Google, TikTok ให้ ROI สูงสุด ด้วย AI Optimization และ Data-Driven Strategy</p>
+        </div>
       </div>
-      <div class="service-card reveal-up">
-        <div class="service-icon">📈</div>
-        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">SEO Growth</h3>
-        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">ทำ SEO ให้ติดอันดับ Google คีย์เวิร์ดท้องถิ่น ดึงลูกค้าที่พร้อมซื้อมาหาธุรกิจคุณ</p>
+      <div class="service-card has-img reveal-up">
+        <img src="assets/images/seo-growth-bright.jpg" alt="SEO กาญจนบุรี ติดหน้าแรก Google" class="card-img-top" loading="lazy">
+        <div class="card-body">
+          <div class="service-icon">📈</div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">SEO Growth</h3>
+          <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">ทำ SEO ให้ติดอันดับ Google คีย์เวิร์ดท้องถิ่น ดึงลูกค้าที่พร้อมซื้อมาหาธุรกิจคุณ</p>
+        </div>
       </div>
-      <div class="service-card reveal-up">
-        <div class="service-icon">🗺️</div>
-        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Google Map Marketing</h3>
-        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">เพิ่มรีวิว ทำให้ร้านติด Local Pack ลูกค้าค้นหาเจอก่อนคู่แข่งทุกครั้ง</p>
+      <div class="service-card has-img reveal-up">
+        <img src="assets/images/google-map-bright.jpg" alt="Google Map Marketing กาญจนบุรี" class="card-img-top" loading="lazy">
+        <div class="card-body">
+          <div class="service-icon">🗺️</div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Google Map Marketing</h3>
+          <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">เพิ่มรีวิว ทำให้ร้านติด Local Pack ลูกค้าค้นหาเจอก่อนคู่แข่งทุกครั้ง</p>
+        </div>
       </div>
-      <div class="service-card reveal-up">
-        <div class="service-icon">🤖</div>
-        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">AI Automation</h3>
-        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">ระบบ AI ตอบลูกค้า ปิดการขาย ส่ง Follow-up อัตโนมัติ ทำงานแทนทีมขายตลอด 24/7</p>
+      <div class="service-card has-img reveal-up">
+        <img src="assets/images/ai-chatbot-bright.jpg" alt="AI Automation สำหรับธุรกิจ" class="card-img-top" loading="lazy">
+        <div class="card-body">
+          <div class="service-icon">🤖</div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">AI Automation</h3>
+          <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">ระบบ AI ตอบลูกค้า ปิดการขาย ส่ง Follow-up อัตโนมัติ ทำงานแทนทีมขายตลอด 24/7</p>
+        </div>
       </div>
-      <div class="service-card reveal-up">
-        <div class="service-icon">📊</div>
-        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Business Intelligence</h3>
-        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">Dashboard วิเคราะห์ข้อมูลธุรกิจแบบ Real-time รู้ว่าลูกค้ามาจากไหน อะไรได้ผล อะไรต้องปรับ</p>
+      <div class="service-card has-img reveal-up">
+        <img src="assets/images/dashboard-preview.jpg" alt="Business Intelligence Dashboard" class="card-img-top" loading="lazy">
+        <div class="card-body">
+          <div class="service-icon">📊</div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Business Intelligence</h3>
+          <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">Dashboard วิเคราะห์ข้อมูลธุรกิจแบบ Real-time รู้ว่าลูกค้ามาจากไหน อะไรได้ผล อะไรต้องปรับ</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ==================== INDUSTRIES ==================== -->
-<section class="section" style="background:var(--navy);">
+<section class="section section-warm">
   <div class="container">
     <div class="section-title text-center reveal-up" style="margin-bottom:60px;">
       <div class="section-tag">✦ กลุ่มลูกค้า</div>
@@ -244,54 +301,50 @@
       <p class="text-muted" style="max-width:500px;margin:0 auto;">เราเชี่ยวชาญธุรกิจท่องเที่ยวและบริการในกาญจนบุรีโดยเฉพาะ</p>
     </div>
 
-    <div class="grid-4 stagger-reveal" style="gap:20px;">
-      <div class="industry-card">
-        <div class="industry-icon">⛵</div>
-        <h3 style="font-weight:700;margin-bottom:8px;">แพกาญจนบุรี</h3>
-        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">เพิ่มยอดจอง เพิ่มรีวิว ดึงนักท่องเที่ยวกรุงเทพฯ</p>
-      </div>
-      <div class="industry-card">
-        <div class="industry-icon">🏝️</div>
-        <h3 style="font-weight:700;margin-bottom:8px;">รีสอร์ท</h3>
-        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">SEO, Google Ads, Social เพิ่ม Direct Booking</p>
-      </div>
-      <div class="industry-card">
-        <div class="industry-icon">🏨</div>
-        <h3 style="font-weight:700;margin-bottom:8px;">โรงแรม</h3>
-        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">ลด OTA Commission เพิ่มยอดจองตรง</p>
-      </div>
-      <div class="industry-card">
-        <div class="industry-icon">🏊</div>
-        <h3 style="font-weight:700;margin-bottom:8px;">พูลวิลล่า</h3>
-        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">ดึง High-Value ลูกค้า สร้าง Premium Brand</p>
-      </div>
-      <div class="industry-card">
-        <div class="industry-icon">☕</div>
-        <h3 style="font-weight:700;margin-bottom:8px;">คาเฟ่</h3>
-        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">Google Map, Instagram, TikTok ดึงลูกค้าใหม่</p>
-      </div>
-      <div class="industry-card">
-        <div class="industry-icon">🍽️</div>
-        <h3 style="font-weight:700;margin-bottom:8px;">ร้านอาหาร</h3>
-        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">เพิ่มโต๊ะจอง เพิ่มรีวิว สร้าง Local Awareness</p>
-      </div>
-      <div class="industry-card">
-        <div class="industry-icon">🌿</div>
-        <h3 style="font-weight:700;margin-bottom:8px;">ธุรกิจท่องเที่ยว</h3>
-        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">Package Tour, Activity, Guide ขายออนไลน์ได้</p>
-      </div>
-      <div class="industry-card">
-        <div class="industry-icon">🏠</div>
-        <h3 style="font-weight:700;margin-bottom:8px;">อสังหาริมทรัพย์</h3>
-        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">Lead Generation, Property SEO, Ads กาญจนบุรี</p>
-      </div>
+    <div class="gallery-grid stagger-reveal" style="margin-bottom:48px;">
+      <a href="marketing-resort-kanchanaburi.html" class="gallery-item">
+        <img src="assets/images/raft-bright.jpg" alt="การตลาดแพกาญจนบุรี" loading="lazy">
+        <div class="gallery-label">⛵ แพกาญจนบุรี</div>
+      </a>
+      <a href="marketing-resort-kanchanaburi.html" class="gallery-item">
+        <img src="assets/images/resort-pool.jpg" alt="การตลาดรีสอร์ท" loading="lazy">
+        <div class="gallery-label">🏝️ รีสอร์ท & พูลวิลล่า</div>
+      </a>
+      <a href="marketing-hotel-kanchanaburi.html" class="gallery-item">
+        <img src="assets/images/kanchanaburi-hero.jpg" alt="การตลาดโรงแรมกาญจนบุรี" loading="lazy">
+        <div class="gallery-label">🏨 โรงแรม</div>
+      </a>
+      <a href="google-map-marketing.html" class="gallery-item">
+        <img src="assets/images/cafe-bright.jpg" alt="การตลาดคาเฟ่ร้านอาหาร" loading="lazy">
+        <div class="gallery-label">☕ คาเฟ่ & ร้านอาหาร</div>
+      </a>
+      <a href="seo-kanchanaburi.html" class="gallery-item">
+        <img src="assets/images/seo-growth-bright.jpg" alt="ธุรกิจท่องเที่ยวกาญจนบุรี" loading="lazy">
+        <div class="gallery-label">🌿 ธุรกิจท่องเที่ยว</div>
+      </a>
+      <a href="contact.html" class="gallery-item">
+        <img src="assets/images/marketing-team.jpg" alt="อสังหาริมทรัพย์กาญจนบุรี" loading="lazy">
+        <div class="gallery-label">🏠 อสังหาริมทรัพย์</div>
+      </a>
     </div>
+
   </div>
 </section>
 
 <!-- ==================== AI MARKETING ECOSYSTEM ==================== -->
-<section class="section" style="background:var(--dark);">
+<section class="section section-alt">
   <div class="container">
+    <div class="split-visual reveal-up" style="margin-bottom:60px;">
+      <div>
+        <img src="assets/images/ai-chatbot-bright.jpg" alt="ระบบ AI Marketing K-MKT" loading="lazy">
+      </div>
+      <div>
+        <div class="section-tag">✦ ทำไมต้องมี AI</div>
+        <h2 class="headline-md" style="margin:16px 0;">ระบบ AI ช่วยธุรกิจ<br><span class="text-gold">ทำงานแทนคน 24 ชม.</span></h2>
+        <p class="text-muted" style="line-height:1.8;margin-bottom:20px;">ตอบลูกค้า LINE, Facebook, เว็บไซต์ อัตโนมัติ สร้าง Content วิเคราะห์ SEO และปิดการขาย — ไม่ต้องจ้างทีมเพิ่ม</p>
+        <a href="ai-marketing.html" class="btn btn-primary magnetic">ดูระบบ AI ทั้งหมด →</a>
+      </div>
+    </div>
     <div class="section-title text-center reveal-up" style="margin-bottom:60px;">
       <div class="section-tag">✦ ระบบ AI</div>
       <h2 class="headline-lg" style="margin-top:12px;">AI Marketing <span class="text-gold">Ecosystem</span></h2>
@@ -362,7 +415,7 @@
 </section>
 
 <!-- ==================== CASE STUDY HORIZONTAL SCROLL ==================== -->
-<section class="section" style="background:var(--navy);">
+<section class="section section-alt">
   <div class="container" style="margin-bottom:48px;">
     <div class="section-title text-center reveal-up">
       <div class="section-tag">✦ ผลลัพธ์จริง</div>
@@ -488,7 +541,7 @@
 </section>
 
 <!-- ==================== SEO EXPERTISE COUNTERS ==================== -->
-<section class="section" style="background:var(--dark);">
+<section class="section section-light">
   <div class="container">
     <div class="section-title text-center reveal-up" style="margin-bottom:60px;">
       <div class="section-tag">✦ ผลลัพธ์ SEO</div>
@@ -518,7 +571,7 @@
 </section>
 
 <!-- ==================== KANCHANABURI ECOSYSTEM ==================== -->
-<section class="section" style="background:var(--navy);">
+<section class="section section-alt">
   <div class="container">
     <div class="section-title text-center reveal-up" style="margin-bottom:60px;">
       <div class="section-tag">✦ รู้จักตลาดกาญจนบุรี</div>
@@ -622,7 +675,7 @@
 </section>
 
 <!-- ==================== FREE MARKETING AUDIT ==================== -->
-<section class="section" style="background:var(--dark);" id="audit">
+<section class="section section-light" id="audit">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;" class="md:grid-cols-2 grid-cols-1">
       <div class="reveal-left">
@@ -671,14 +724,14 @@
             <div>
               <label class="form-label">ประเภทธุรกิจ</label>
               <select class="form-input" style="cursor:pointer;">
-                <option value="" style="background:var(--navy);">เลือกประเภทธุรกิจ</option>
-                <option value="resort" style="background:var(--navy);">รีสอร์ท / โรงแรม</option>
-                <option value="raft" style="background:var(--navy);">แพ / ที่พักริมน้ำ</option>
-                <option value="villa" style="background:var(--navy);">พูลวิลล่า</option>
-                <option value="cafe" style="background:var(--navy);">คาเฟ่ / ร้านอาหาร</option>
-                <option value="tour" style="background:var(--navy);">ธุรกิจท่องเที่ยว</option>
-                <option value="property" style="background:var(--navy);">อสังหาริมทรัพย์</option>
-                <option value="other" style="background:var(--navy);">อื่นๆ</option>
+                <option value="" class="section-alt">เลือกประเภทธุรกิจ</option>
+                <option value="resort" class="section-alt">รีสอร์ท / โรงแรม</option>
+                <option value="raft" class="section-alt">แพ / ที่พักริมน้ำ</option>
+                <option value="villa" class="section-alt">พูลวิลล่า</option>
+                <option value="cafe" class="section-alt">คาเฟ่ / ร้านอาหาร</option>
+                <option value="tour" class="section-alt">ธุรกิจท่องเที่ยว</option>
+                <option value="property" class="section-alt">อสังหาริมทรัพย์</option>
+                <option value="other" class="section-alt">อื่นๆ</option>
               </select>
             </div>
             <div>
@@ -708,7 +761,7 @@
 </section>
 
 <!-- ==================== CONTACT CTA ==================== -->
-<section class="section" style="background:linear-gradient(135deg, var(--navy), #0d2545);">
+<section class="section" class="section section-navy-tint" style="background:linear-gradient(135deg, #EFF6FF, #FFFBF5);">
   <div class="container text-center">
     <div class="reveal-up">
       <div class="section-tag" style="justify-content:center;">✦ พร้อมเริ่มต้นแล้ว?</div>
