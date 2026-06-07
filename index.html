@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-MKT กาญจน์ตลาด | บริษัทการตลาด Online + AI Marketing กาญจนบุรี</title>
+  <meta name="description" content="K-MKT กาญจน์ตลาด บริษัทที่ปรึกษาการตลาด Online, Offline และ AI Marketing สำหรับธุรกิจในกาญจนบุรี รีสอร์ท โรงแรม แพ คาเฟ่ ร้านอาหาร เพิ่มยอดขาย เพิ่มลูกค้าด้วยระบบ AI">
+  <meta name="keywords" content="การตลาดกาญจนบุรี, K-MKT, กาญจน์ตลาด, SEO กาญจนบุรี, AI Marketing, การตลาดรีสอร์ท, การตลาดโรงแรม, Google Ads กาญจนบุรี">
+  <meta name="author" content="K-MKT กาญจน์ตลาด">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://k-mkt.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://k-mkt.com/">
+  <meta property="og:title" content="K-MKT กาญจน์ตลาด | บริษัทการตลาด AI Marketing กาญจนบุรี">
+  <meta property="og:description" content="โตด้วยการตลาด + AI + ระบบอัตโนมัติ บริษัทการตลาดครบวงจรสำหรับธุรกิจในกาญจนบุรี">
+  <meta property="og:image" content="https://k-mkt.com/assets/images/og-image.jpg">
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:site_name" content="K-MKT กาญจน์ตลาด">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="K-MKT กาญจน์ตลาด | AI Marketing กาญจนบุรี">
+  <meta name="twitter:description" content="โตด้วยการตลาด + AI + ระบบอัตโนมัติ">
+  <meta name="twitter:image" content="https://k-mkt.com/assets/images/og-image.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800;900&family=Prompt:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0B1F3A',
+            gold: '#D4AF37',
+            'blue-accent': '#3B82F6',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loading-logo">K-MKT</div>
+  <div class="loading-bar-wrap">
+    <div class="loading-bar"></div>
+  </div>
+  <div class="loading-text">กาญจน์ตลาด • กำลังโหลด</div>
+</div>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Custom Cursor -->
+<div id="cursor-glow"></div>
+<div id="cursor-ring"></div>
+<div id="cursor-dot"></div>
+
+<!-- Header -->
+<header id="main-header">
+  <div class="container">
+    <nav class="flex items-center justify-between">
+      <a href="index.html" class="nav-logo">K-MKT<span>.com</span></a>
+
+      <!-- Desktop Nav -->
+      <div class="nav-desktop hidden md:flex items-center gap-6">
+        <a href="services.html" class="nav-link">บริการ</a>
+        <a href="ai-marketing.html" class="nav-link">AI Marketing</a>
+        <a href="seo-kanchanaburi.html" class="nav-link">SEO</a>
+        <a href="google-map-marketing.html" class="nav-link">Google Map</a>
+        <a href="case-study.html" class="nav-link">ผลงาน</a>
+        <a href="blog.html" class="nav-link">บทความ</a>
+        <a href="contact.html" class="nav-link">ติดต่อ</a>
+        <a href="free-audit.html" class="btn btn-primary magnetic" style="padding:10px 20px;font-size:0.85rem;">ตรวจสุขภาพการตลาดฟรี</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="hamburger md:hidden" aria-label="เมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <button id="mobile-close" style="position:absolute;top:24px;right:24px;font-size:2rem;color:white;background:none;border:none;cursor:pointer;">✕</button>
+  <a href="index.html" class="mobile-nav-link">หน้าแรก</a>
+  <a href="services.html" class="mobile-nav-link">บริการ</a>
+  <a href="ai-marketing.html" class="mobile-nav-link">AI Marketing</a>
+  <a href="seo-kanchanaburi.html" class="mobile-nav-link">SEO กาญจนบุรี</a>
+  <a href="google-map-marketing.html" class="mobile-nav-link">Google Map</a>
+  <a href="case-study.html" class="mobile-nav-link">ผลงาน</a>
+  <a href="blog.html" class="mobile-nav-link">บทความ</a>
+  <a href="contact.html" class="mobile-nav-link">ติดต่อ</a>
+  <a href="free-audit.html" class="btn btn-primary" style="margin-top:16px;">ตรวจสุขภาพการตลาดฟรี</a>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb-1"></div>
+  <div class="hero-orb-2"></div>
+
+  <div class="container" style="position:relative;z-index:1;padding-top:120px;padding-bottom:80px;">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      บริษัทการตลาด AI อันดับ 1 สำหรับธุรกิจกาญจนบุรี
+    </div>
+
+    <h1 class="headline-xl" style="max-width:800px;margin-bottom:24px;">
+      <div style="overflow:hidden;">
+        <span class="hero-char">โ</span><span class="hero-char">ต</span><span class="hero-char">ด</span><span class="hero-char">้</span><span class="hero-char">ว</span><span class="hero-char">ย</span>
+        <span class="hero-char" style="color:var(--gold);"> </span>
+        <span class="hero-char" style="color:var(--gold);">ก</span><span class="hero-char" style="color:var(--gold);">า</span><span class="hero-char" style="color:var(--gold);">ร</span><span class="hero-char" style="color:var(--gold);">ต</span><span class="hero-char" style="color:var(--gold);">ล</span><span class="hero-char" style="color:var(--gold);">า</span><span class="hero-char" style="color:var(--gold);">ด</span>
+      </div>
+      <div style="overflow:hidden;">
+        <span class="hero-char">+</span>
+        <span class="hero-char" style="color:var(--blue-accent);"> AI </span>
+        <span class="hero-char">+</span>
+        <span class="hero-char"> ระบบ</span><span class="hero-char">อัตโนมัติ</span>
+      </div>
+    </h1>
+
+    <p class="hero-sub" style="font-size:1.15rem;color:rgba(255,255,255,0.75);max-width:640px;line-height:1.8;margin-bottom:36px;">
+      K-MKT ช่วยเจ้าของธุรกิจในกาญจนบุรี วางแผนการตลาด Online, Offline และ AI Marketing เพื่อ<strong style="color:var(--gold);">เพิ่มลูกค้า เพิ่มยอดขาย</strong> และสร้างระบบที่ทำงานแทนคนได้จริง
+    </p>
+
+    <div class="hero-ctas" style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px;">
+      <a href="contact.html" class="btn btn-primary magnetic" style="font-size:1rem;padding:16px 32px;">
+        📞 ปรึกษาฟรี ไม่มีค่าใช้จ่าย
+      </a>
+      <a href="free-audit.html" class="btn btn-outline magnetic" style="font-size:1rem;padding:16px 32px;">
+        🔍 ตรวจสุขภาพการตลาดฟรี
+      </a>
+    </div>
+
+    <!-- Floating AI Tags -->
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:60px;">
+      <div class="float-ai-tag">🤖 AI Chatbot</div>
+      <div class="float-ai-tag">📊 Performance Ads</div>
+      <div class="float-ai-tag">🗺️ Google Map SEO</div>
+      <div class="float-ai-tag">📈 SEO Growth</div>
+      <div class="float-ai-tag">🔗 LINE OA Automation</div>
+      <div class="float-ai-tag">📱 Social Media</div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">500<span style="font-size:1.4rem;">%</span></div>
+        <div class="stat-label">เพิ่ม Traffic เฉลี่ย</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">300<span style="font-size:1.4rem;">%</span></div>
+        <div class="stat-label">เพิ่มยอดจองเฉลี่ย</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">50<span style="font-size:1.4rem;">+</span></div>
+        <div class="stat-label">ธุรกิจที่ดูแลอยู่</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5<span style="font-size:1.4rem;">ปี</span></div>
+        <div class="stat-label">ประสบการณ์ตลาดกาญจนบุรี</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);">
+    <span>เลื่อนลง</span>
+    <div class="scroll-indicator-line"></div>
+  </div>
+</section>
+
+<!-- ==================== WHY K-MKT ==================== -->
+<section class="section" style="background:var(--dark);">
+  <div class="container">
+    <div class="section-title text-center reveal-up" style="margin-bottom:60px;">
+      <div class="section-tag">✦ ทำไมต้อง K-MKT</div>
+      <h2 class="headline-lg" style="margin-top:12px;">บริการการตลาดครบวงจร<br><span class="gradient-text">สำหรับธุรกิจกาญจนบุรี</span></h2>
+      <div class="section-divider" style="margin:20px auto;"></div>
+      <p class="text-muted" style="max-width:560px;margin:0 auto;line-height:1.8;">เราไม่ใช่แค่เอเจนซี่ทั่วไป แต่เป็นทีมที่รู้จักตลาดกาญจนบุรีดีกว่าใคร พร้อมใช้ AI ขับเคลื่อนทุกกลยุทธ์</p>
+    </div>
+
+    <div class="grid-3 stagger-reveal" style="gap:24px;">
+      <div class="service-card reveal-up">
+        <div class="service-icon">🎯</div>
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Marketing Strategy</h3>
+        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">วางแผนการตลาดระยะยาวที่ตอบโจทย์ธุรกิจท้องถิ่น รู้จักพฤติกรรมนักท่องเที่ยวกาญจนบุรีอย่างลึกซึ้ง</p>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon">📢</div>
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Performance Ads</h3>
+        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">ยิงแอด Facebook, Google, TikTok ให้ ROI สูงสุด ด้วย AI Optimization และ Data-Driven Strategy</p>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon">📈</div>
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">SEO Growth</h3>
+        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">ทำ SEO ให้ติดอันดับ Google คีย์เวิร์ดท้องถิ่น ดึงลูกค้าที่พร้อมซื้อมาหาธุรกิจคุณ</p>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon">🗺️</div>
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Google Map Marketing</h3>
+        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">เพิ่มรีวิว ทำให้ร้านติด Local Pack ลูกค้าค้นหาเจอก่อนคู่แข่งทุกครั้ง</p>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon">🤖</div>
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">AI Automation</h3>
+        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">ระบบ AI ตอบลูกค้า ปิดการขาย ส่ง Follow-up อัตโนมัติ ทำงานแทนทีมขายตลอด 24/7</p>
+      </div>
+      <div class="service-card reveal-up">
+        <div class="service-icon">📊</div>
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:12px;">Business Intelligence</h3>
+        <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">Dashboard วิเคราะห์ข้อมูลธุรกิจแบบ Real-time รู้ว่าลูกค้ามาจากไหน อะไรได้ผล อะไรต้องปรับ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INDUSTRIES ==================== -->
+<section class="section" style="background:var(--navy);">
+  <div class="container">
+    <div class="section-title text-center reveal-up" style="margin-bottom:60px;">
+      <div class="section-tag">✦ กลุ่มลูกค้า</div>
+      <h2 class="headline-lg" style="margin-top:12px;">ธุรกิจที่ K-MKT <span class="text-gold">ดูแล</span></h2>
+      <div class="section-divider" style="margin:20px auto;"></div>
+      <p class="text-muted" style="max-width:500px;margin:0 auto;">เราเชี่ยวชาญธุรกิจท่องเที่ยวและบริการในกาญจนบุรีโดยเฉพาะ</p>
+    </div>
+
+    <div class="grid-4 stagger-reveal" style="gap:20px;">
+      <div class="industry-card">
+        <div class="industry-icon">⛵</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">แพกาญจนบุรี</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">เพิ่มยอดจอง เพิ่มรีวิว ดึงนักท่องเที่ยวกรุงเทพฯ</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon">🏝️</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">รีสอร์ท</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">SEO, Google Ads, Social เพิ่ม Direct Booking</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon">🏨</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">โรงแรม</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">ลด OTA Commission เพิ่มยอดจองตรง</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon">🏊</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">พูลวิลล่า</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">ดึง High-Value ลูกค้า สร้าง Premium Brand</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon">☕</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">คาเฟ่</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">Google Map, Instagram, TikTok ดึงลูกค้าใหม่</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon">🍽️</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">ร้านอาหาร</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">เพิ่มโต๊ะจอง เพิ่มรีวิว สร้าง Local Awareness</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon">🌿</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">ธุรกิจท่องเที่ยว</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">Package Tour, Activity, Guide ขายออนไลน์ได้</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon">🏠</div>
+        <h3 style="font-weight:700;margin-bottom:8px;">อสังหาริมทรัพย์</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);">Lead Generation, Property SEO, Ads กาญจนบุรี</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== AI MARKETING ECOSYSTEM ==================== -->
+<section class="section" style="background:var(--dark);">
+  <div class="container">
+    <div class="section-title text-center reveal-up" style="margin-bottom:60px;">
+      <div class="section-tag">✦ ระบบ AI</div>
+      <h2 class="headline-lg" style="margin-top:12px;">AI Marketing <span class="text-gold">Ecosystem</span></h2>
+      <div class="section-divider" style="margin:20px auto;"></div>
+      <p class="text-muted" style="max-width:560px;margin:0 auto;">ระบบ AI ที่เชื่อมทุกช่องทางเข้าหากัน ทำงานอัตโนมัติ ไม่ต้องเพิ่มทีมงาน</p>
+    </div>
+
+    <div class="ai-ecosystem" style="max-width:900px;margin:0 auto;">
+      <!-- Center node -->
+      <div style="display:flex;justify-content:center;margin-bottom:40px;">
+        <div class="ai-center-node">
+          <div style="line-height:1.3;padding:12px;text-align:center;">
+            <div style="font-size:1.8rem;margin-bottom:4px;">🤖</div>
+            <div>K-MKT<br>AI Core</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Node Grid -->
+      <div class="grid-4" style="gap:16px;">
+        <div class="ai-node">
+          <div style="font-size:1.5rem;margin-bottom:8px;">💬</div>
+          <div style="font-weight:700;margin-bottom:4px;">AI Chatbot</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);">ตอบลูกค้า 24/7</div>
+        </div>
+        <div class="ai-node">
+          <div style="font-size:1.5rem;margin-bottom:8px;">🔗</div>
+          <div style="font-weight:700;margin-bottom:4px;">LINE OA AI</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);">ระบบอัตโนมัติ LINE</div>
+        </div>
+        <div class="ai-node">
+          <div style="font-size:1.5rem;margin-bottom:8px;">📘</div>
+          <div style="font-weight:700;margin-bottom:4px;">FB Messenger AI</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);">ตอบ Inbox อัตโนมัติ</div>
+        </div>
+        <div class="ai-node">
+          <div style="font-size:1.5rem;margin-bottom:8px;">✍️</div>
+          <div style="font-weight:700;margin-bottom:4px;">AI Content</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);">สร้าง Content อัตโนมัติ</div>
+        </div>
+        <div class="ai-node">
+          <div style="font-size:1.5rem;margin-bottom:8px;">🔍</div>
+          <div style="font-weight:700;margin-bottom:4px;">AI SEO</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);">วิเคราะห์ & ปรับ SEO</div>
+        </div>
+        <div class="ai-node">
+          <div style="font-size:1.5rem;margin-bottom:8px;">👥</div>
+          <div style="font-weight:700;margin-bottom:4px;">AI CRM</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);">จัดการลูกค้าอัตโนมัติ</div>
+        </div>
+        <div class="ai-node">
+          <div style="font-size:1.5rem;margin-bottom:8px;">📊</div>
+          <div style="font-weight:700;margin-bottom:4px;">Analytics AI</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);">วิเคราะห์ Data ลึก</div>
+        </div>
+        <div class="ai-node">
+          <div style="font-size:1.5rem;margin-bottom:8px;">🤝</div>
+          <div style="font-weight:700;margin-bottom:4px;">AI Sales Agent</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);">ช่วยทีมขายปิดดีล</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:40px;">
+        <a href="ai-marketing.html" class="btn btn-primary magnetic">รู้จัก AI Marketing System →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CASE STUDY HORIZONTAL SCROLL ==================== -->
+<section class="section" style="background:var(--navy);">
+  <div class="container" style="margin-bottom:48px;">
+    <div class="section-title text-center reveal-up">
+      <div class="section-tag">✦ ผลลัพธ์จริง</div>
+      <h2 class="headline-lg" style="margin-top:12px;">Case Study <span class="text-gold">ที่เราทำได้จริง</span></h2>
+      <div class="section-divider" style="margin:20px auto;"></div>
+    </div>
+  </div>
+
+  <div class="container-wide">
+    <div class="h-scroll-container" style="padding-bottom:20px;">
+      <div class="h-scroll-track" style="padding:0 24px 40px;">
+        <div class="case-card">
+          <div class="case-number">+300%</div>
+          <div class="chip-gold" style="margin-bottom:16px;display:inline-block;">แพกาญจนบุรี</div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:12px;">เพิ่มยอดจองแพ 300% ใน 4 เดือน</h3>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px;">แพริมน้ำแห่งหนึ่งในกาญจนบุรีที่เคยพึ่ง OTA 100% หลังใช้ระบบ Direct Booking + Google Ads + SEO สามารถดึงลูกค้าตรงได้ถึง 70%</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">SEO Traffic</span>
+              <span style="color:var(--gold);font-weight:700;">↑ 450%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Google Map Reviews</span>
+              <span style="color:var(--gold);font-weight:700;">↑ 180 รีวิว</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Direct Booking</span>
+              <span style="color:var(--gold);font-weight:700;">+70%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-number">+500%</div>
+          <div class="chip-gold" style="margin-bottom:16px;display:inline-block;">รีสอร์ท</div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:12px;">เพิ่ม Traffic Website 500% ใน 6 เดือน</h3>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px;">รีสอร์ทติดริมน้ำไทรโยคที่เว็บไซต์เดิมไม่มีคนเข้า หลัง Redesign + SEO + Content Marketing ยอดคนเข้าเว็บพุ่งขึ้น 5 เท่าภายใน 6 เดือน</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Organic Traffic</span>
+              <span style="color:var(--gold);font-weight:700;">↑ 500%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Keyword Ranking</span>
+              <span style="color:var(--gold);font-weight:700;">Top 3 × 24 คำ</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Booking Lead</span>
+              <span style="color:var(--gold);font-weight:700;">+280%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-number">+200%</div>
+          <div class="chip-gold" style="margin-bottom:16px;display:inline-block;">โรงแรม</div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:12px;">เพิ่ม Lead จาก Google 200%</h3>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px;">โรงแรมย่านเมืองกาญจนบุรีที่ยิงแอดเดิมได้ CPA สูงมาก หลังปรับ Google Ads Strategy + Landing Page ต้นทุนต่อ Lead ลดลง 65%</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Lead Volume</span>
+              <span style="color:var(--gold);font-weight:700;">↑ 200%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Cost Per Lead</span>
+              <span style="color:var(--gold);font-weight:700;">↓ 65%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Conversion Rate</span>
+              <span style="color:var(--gold);font-weight:700;">↑ 4.2%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-number">+150%</div>
+          <div class="chip-gold" style="margin-bottom:16px;display:inline-block;">ร้านอาหาร</div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:12px;">เพิ่มยอดขายหน้าร้าน 150%</h3>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px;">ร้านอาหารริมแม่น้ำแควที่ลูกค้าหาไม่เจอ หลังทำ Google Business Profile + รีวิว + TikTok Content ลูกค้าเดินเข้าร้านเพิ่มขึ้น 150% ใน 3 เดือน</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Google Map Views</span>
+              <span style="color:var(--gold);font-weight:700;">↑ 800%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Walk-in Customers</span>
+              <span style="color:var(--gold);font-weight:700;">↑ 150%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Google Reviews</span>
+              <span style="color:var(--gold);font-weight:700;">4.8★ × 240 รีวิว</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-number">+400%</div>
+          <div class="chip-gold" style="margin-bottom:16px;display:inline-block;">พูลวิลล่า</div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:12px;">เพิ่มยอดจอง Premium 400%</h3>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px;">พูลวิลล่าหรูที่ไม่รู้จะหาลูกค้า High-Value ได้อย่างไร หลัง Branding + Meta Ads เจาะกลุ่ม Premium + AI Chatbot ปิดการขาย</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Booking Revenue</span>
+              <span style="color:var(--gold);font-weight:700;">↑ 400%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Average Order Value</span>
+              <span style="color:var(--gold);font-weight:700;">↑ 85%</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:0.82rem;">
+              <span style="color:rgba(255,255,255,0.5);">Repeat Customers</span>
+              <span style="color:var(--gold);font-weight:700;">↑ 60%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px;">
+      <a href="case-study.html" class="btn btn-outline magnetic">ดู Case Study ทั้งหมด →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SEO EXPERTISE COUNTERS ==================== -->
+<section class="section" style="background:var(--dark);">
+  <div class="container">
+    <div class="section-title text-center reveal-up" style="margin-bottom:60px;">
+      <div class="section-tag">✦ ผลลัพธ์ SEO</div>
+      <h2 class="headline-lg" style="margin-top:12px;">ตัวเลขที่ <span class="text-gold">พิสูจน์ผลงาน</span></h2>
+      <div class="section-divider" style="margin:20px auto;"></div>
+    </div>
+
+    <div class="grid-4" style="gap:24px;text-align:center;">
+      <div class="highlight-box reveal-scale">
+        <div class="counter-value" data-target="1200" data-suffix="+">0+</div>
+        <div style="font-size:0.9rem;color:rgba(255,255,255,0.6);margin-top:8px;">Keyword ที่ติด Top 10 Google</div>
+      </div>
+      <div class="highlight-box reveal-scale">
+        <div class="counter-value" data-target="500" data-suffix="%">0%</div>
+        <div style="font-size:0.9rem;color:rgba(255,255,255,0.6);margin-top:8px;">Traffic Growth เฉลี่ย</div>
+      </div>
+      <div class="highlight-box reveal-scale">
+        <div class="counter-value" data-target="50" data-suffix="+">0+</div>
+        <div style="font-size:0.9rem;color:rgba(255,255,255,0.6);margin-top:8px;">ธุรกิจที่ติด Google Map Top 3</div>
+      </div>
+      <div class="highlight-box reveal-scale">
+        <div class="counter-value" data-target="4800" data-suffix="+">0+</div>
+        <div style="font-size:0.9rem;color:rgba(255,255,255,0.6);margin-top:8px;">Google Reviews ที่ดูแล</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== KANCHANABURI ECOSYSTEM ==================== -->
+<section class="section" style="background:var(--navy);">
+  <div class="container">
+    <div class="section-title text-center reveal-up" style="margin-bottom:60px;">
+      <div class="section-tag">✦ รู้จักตลาดกาญจนบุรี</div>
+      <h2 class="headline-lg" style="margin-top:12px;">Kanchanaburi Tourism<br><span class="text-gold">Marketing Ecosystem</span></h2>
+      <div class="section-divider" style="margin:20px auto;"></div>
+      <p class="text-muted" style="max-width:600px;margin:0 auto;">เราดูแลธุรกิจในทุกโซนของกาญจนบุรี รู้จักนักท่องเที่ยวแต่ละโซน รู้จักฤดูกาล รู้จักพฤติกรรมการจอง</p>
+    </div>
+
+    <div class="grid-3" style="gap:20px;">
+      <div class="zone-card">
+        <div style="font-size:2rem;margin-bottom:12px;">🏙️</div>
+        <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:4px;">เมืองกาญจนบุรี</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:12px;">Hub หลัก ธุรกิจโรงแรม ร้านอาหาร คาเฟ่</p>
+        <div class="zone-info" style="max-height:0;overflow:hidden;opacity:0;transition:all 0.4s;">
+          <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:12px;margin-top:4px;">
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.7;">
+              <div>🎯 <strong>ธุรกิจเด่น:</strong> โรงแรม ร้านอาหาร ตลาด</div>
+              <div>📈 <strong>กลยุทธ์:</strong> Local SEO + Google Map</div>
+              <div>🤖 <strong>AI:</strong> Chatbot จอง + LINE OA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-card">
+        <div style="font-size:2rem;margin-bottom:12px;">🌊</div>
+        <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:4px;">ศรีสวัสดิ์</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:12px;">เขื่อนศรีนครินทร์ รีสอร์ทหรู แพลอยน้ำ</p>
+        <div class="zone-info" style="max-height:0;overflow:hidden;opacity:0;transition:all 0.4s;">
+          <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:12px;margin-top:4px;">
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.7;">
+              <div>🎯 <strong>ธุรกิจเด่น:</strong> รีสอร์ท พูลวิลล่า แพ</div>
+              <div>📈 <strong>กลยุทธ์:</strong> Instagram + Facebook Ads</div>
+              <div>🤖 <strong>AI:</strong> AI Booking + CRM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-card">
+        <div style="font-size:2rem;margin-bottom:12px;">🌿</div>
+        <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:4px;">ไทรโยค</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:12px;">น้ำตก ล่องแก่ง แพ รีสอร์ทธรรมชาติ</p>
+        <div class="zone-info" style="max-height:0;overflow:hidden;opacity:0;transition:all 0.4s;">
+          <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:12px;margin-top:4px;">
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.7;">
+              <div>🎯 <strong>ธุรกิจเด่น:</strong> แพ รีสอร์ท Activity</div>
+              <div>📈 <strong>กลยุทธ์:</strong> TikTok + SEO ท่องเที่ยว</div>
+              <div>🤖 <strong>AI:</strong> Content AI + Chatbot</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-card">
+        <div style="font-size:2rem;margin-bottom:12px;">⛰️</div>
+        <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:4px;">ทองผาภูมิ</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:12px;">เขื่อนวชิราลงกรณ ธรรมชาติ Eco-Tourism</p>
+        <div class="zone-info" style="max-height:0;overflow:hidden;opacity:0;transition:all 0.4s;">
+          <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:12px;margin-top:4px;">
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.7;">
+              <div>🎯 <strong>ธุรกิจเด่น:</strong> Eco Resort Camping</div>
+              <div>📈 <strong>กลยุทธ์:</strong> SEO + Pinterest + Google</div>
+              <div>🤖 <strong>AI:</strong> Booking AI + Analytics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-card">
+        <div style="font-size:2rem;margin-bottom:12px;">🕌</div>
+        <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:4px;">สังขละบุรี</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:12px;">วัดวังวิเวการาม สะพานมอญ ชุมชนท่องเที่ยว</p>
+        <div class="zone-info" style="max-height:0;overflow:hidden;opacity:0;transition:all 0.4s;">
+          <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:12px;margin-top:4px;">
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.7;">
+              <div>🎯 <strong>ธุรกิจเด่น:</strong> Guesthouse ที่พัก Tour</div>
+              <div>📈 <strong>กลยุทธ์:</strong> Google Map + IG Story</div>
+              <div>🤖 <strong>AI:</strong> Multi-lang Chatbot</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zone-card">
+        <div style="font-size:2rem;margin-bottom:12px;">💎</div>
+        <h3 style="font-weight:700;font-size:1.05rem;margin-bottom:4px;">บ่อพลอย</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:12px;">ตลาดพลอย ของพื้นเมือง เส้นทางผ่าน</p>
+        <div class="zone-info" style="max-height:0;overflow:hidden;opacity:0;transition:all 0.4s;">
+          <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:12px;margin-top:4px;">
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.7;">
+              <div>🎯 <strong>ธุรกิจเด่น:</strong> ร้านค้า โอท็อป ที่พัก</div>
+              <div>📈 <strong>กลยุทธ์:</strong> Google Map + Facebook</div>
+              <div>🤖 <strong>AI:</strong> Local SEO + Reviews AI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FREE MARKETING AUDIT ==================== -->
+<section class="section" style="background:var(--dark);" id="audit">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;" class="md:grid-cols-2 grid-cols-1">
+      <div class="reveal-left">
+        <div class="section-tag">✦ บริการฟรี</div>
+        <h2 class="headline-lg" style="margin-top:16px;margin-bottom:20px;">ตรวจสุขภาพ<br><span class="text-gold">การตลาดฟรี</span></h2>
+        <div class="section-divider"></div>
+        <p class="text-muted" style="margin-top:20px;line-height:1.8;margin-bottom:32px;">
+          ส่งข้อมูลธุรกิจมาให้เรา เราจะวิเคราะห์สถานะการตลาดของคุณแบบละเอียด ทั้ง SEO, Google Map, Social Media และ AI Readiness ภายใน 24 ชั่วโมง <strong style="color:white;">ไม่มีค่าใช้จ่าย</strong>
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div class="process-step">
+            <div class="process-num">1</div>
+            <div>
+              <div style="font-weight:700;margin-bottom:4px;">กรอกข้อมูลธุรกิจ</div>
+              <div style="font-size:0.85rem;color:rgba(255,255,255,0.55);">ใช้เวลา 3 นาที ไม่ต้องเตรียมอะไรมาก</div>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-num">2</div>
+            <div>
+              <div style="font-weight:700;margin-bottom:4px;">ทีมวิเคราะห์ภายใน 24 ชั่วโมง</div>
+              <div style="font-size:0.85rem;color:rgba(255,255,255,0.55);">ทีม Expert ตรวจสอบทุกช่องทาง</div>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-num">3</div>
+            <div>
+              <div style="font-weight:700;margin-bottom:4px;">รับ Marketing Health Report</div>
+              <div style="font-size:0.85rem;color:rgba(255,255,255,0.55);">Score + คำแนะนำแบบละเอียด ฟรี</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="audit-form">
+          <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:8px;">กรอกข้อมูลธุรกิจ</h3>
+          <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);margin-bottom:28px;">ฟรี ไม่มีภาระผูกพัน รับ Report ภายใน 24 ชั่วโมง</p>
+
+          <form data-form="audit" style="display:flex;flex-direction:column;gap:16px;">
+            <div>
+              <label class="form-label">ชื่อธุรกิจ *</label>
+              <input type="text" class="form-input" placeholder="เช่น รีสอร์ทแม่น้ำแคว" required>
+            </div>
+            <div>
+              <label class="form-label">ประเภทธุรกิจ</label>
+              <select class="form-input" style="cursor:pointer;">
+                <option value="" style="background:var(--navy);">เลือกประเภทธุรกิจ</option>
+                <option value="resort" style="background:var(--navy);">รีสอร์ท / โรงแรม</option>
+                <option value="raft" style="background:var(--navy);">แพ / ที่พักริมน้ำ</option>
+                <option value="villa" style="background:var(--navy);">พูลวิลล่า</option>
+                <option value="cafe" style="background:var(--navy);">คาเฟ่ / ร้านอาหาร</option>
+                <option value="tour" style="background:var(--navy);">ธุรกิจท่องเที่ยว</option>
+                <option value="property" style="background:var(--navy);">อสังหาริมทรัพย์</option>
+                <option value="other" style="background:var(--navy);">อื่นๆ</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">เว็บไซต์ (ถ้ามี)</label>
+              <input type="url" class="form-input" placeholder="https://yourwebsite.com">
+            </div>
+            <div>
+              <label class="form-label">Facebook Page</label>
+              <input type="text" class="form-input" placeholder="facebook.com/yourpage">
+            </div>
+            <div>
+              <label class="form-label">Google Map URL</label>
+              <input type="text" class="form-input" placeholder="maps.app.goo.gl/...">
+            </div>
+            <div>
+              <label class="form-label">เบอร์โทรติดต่อ *</label>
+              <input type="tel" class="form-input" placeholder="08X-XXX-XXXX" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-full" style="justify-content:center;font-size:1rem;padding:16px;">
+              🔍 ขอรับรายงานฟรี
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT CTA ==================== -->
+<section class="section" style="background:linear-gradient(135deg, var(--navy), #0d2545);">
+  <div class="container text-center">
+    <div class="reveal-up">
+      <div class="section-tag" style="justify-content:center;">✦ พร้อมเริ่มต้นแล้ว?</div>
+      <h2 class="headline-lg" style="margin:20px 0;">ปรึกษา K-MKT <span class="text-gold">ฟรี วันนี้</span></h2>
+      <p class="text-muted" style="max-width:500px;margin:0 auto 40px;line-height:1.8;">ไม่ต้องรอ ไม่ต้องตัดสินใจก่อน คุยกับทีมเราได้เลย เราพร้อมให้คำแนะนำโดยไม่มีภาระผูกพัน</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary magnetic" style="font-size:1rem;padding:16px 36px;">📞 ติดต่อเรา</a>
+        <a href="https://line.me/kmkt" class="btn magnetic" style="background:#06C755;color:white;font-size:1rem;padding:16px 36px;">💚 LINE: @k-mkt</a>
+        <a href="free-audit.html" class="btn btn-outline magnetic" style="font-size:1rem;padding:16px 36px;">🔍 ตรวจสุขภาพฟรี</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="main-footer">
+  <div class="container">
+    <div class="grid-4" style="gap:40px;margin-bottom:40px;">
+      <div style="grid-column:span 2;" class="md:col-span-2">
+        <div class="footer-logo">K-MKT</div>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;margin-top:8px;margin-bottom:4px;">กาญจน์ตลาด</p>
+        <p style="color:rgba(255,255,255,0.45);font-size:0.85rem;max-width:360px;line-height:1.7;margin-top:16px;">
+          บริษัทการตลาด Online + Offline + AI Marketing สำหรับธุรกิจในกาญจนบุรี เพิ่มลูกค้า เพิ่มยอดขาย ด้วยระบบที่ทำงานแทนคนได้จริง
+        </p>
+        <div style="display:flex;gap:12px;margin-top:24px;">
+          <a href="#" style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:white;transition:all 0.3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">f</a>
+          <a href="#" style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:white;transition:all 0.3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">L</a>
+          <a href="#" style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:white;transition:all 0.3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">▶</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 style="font-weight:700;margin-bottom:20px;color:var(--gold);">บริการ</h4>
+        <a href="services.html" class="footer-link">Online Marketing</a>
+        <a href="ai-marketing.html" class="footer-link">AI Marketing</a>
+        <a href="seo-kanchanaburi.html" class="footer-link">SEO กาญจนบุรี</a>
+        <a href="google-map-marketing.html" class="footer-link">Google Map Marketing</a>
+        <a href="marketing-resort-kanchanaburi.html" class="footer-link">การตลาดรีสอร์ท</a>
+        <a href="marketing-hotel-kanchanaburi.html" class="footer-link">การตลาดโรงแรม</a>
+      </div>
+
+      <div>
+        <h4 style="font-weight:700;margin-bottom:20px;color:var(--gold);">เพิ่มเติม</h4>
+        <a href="case-study.html" class="footer-link">Case Study</a>
+        <a href="blog.html" class="footer-link">บทความ</a>
+        <a href="free-audit.html" class="footer-link">ตรวจสุขภาพฟรี</a>
+        <a href="contact.html" class="footer-link">ติดต่อเรา</a>
+        <div style="margin-top:24px;padding:16px;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.15);border-radius:10px;">
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-bottom:4px;">ติดต่อด่วน</div>
+          <div style="font-weight:700;color:var(--gold);">LINE: @k-mkt</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <p style="font-size:0.82rem;color:rgba(255,255,255,0.35);">© 2024 K-MKT กาญจน์ตลาด. All rights reserved.</p>
+      <div style="display:flex;gap:20px;">
+        <a href="#" style="font-size:0.82rem;color:rgba(255,255,255,0.35);transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">นโยบายความเป็นส่วนตัว</a>
+        <a href="#" style="font-size:0.82rem;color:rgba(255,255,255,0.35);transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">เงื่อนไขการใช้งาน</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Contact Bar -->
+<div id="floating-bar">
+  <a href="tel:+66XXXXXXXXXX" class="float-btn float-phone" title="โทรหาเรา">
+    📞
+    <span class="tooltip">โทรหาเรา</span>
+  </a>
+  <a href="https://line.me/kmkt" target="_blank" class="float-btn float-line" title="LINE">
+    💬
+    <span class="tooltip">LINE: @k-mkt</span>
+  </a>
+  <a href="https://www.facebook.com/kmkt" target="_blank" class="float-btn float-fb" title="Facebook">
+    f
+    <span class="tooltip">Facebook</span>
+  </a>
+  <a href="https://m.me/kmkt" target="_blank" class="float-btn float-msg" title="Messenger">
+    ✉️
+    <span class="tooltip">Messenger</span>
+  </a>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/seo.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>
