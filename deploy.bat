@@ -61,6 +61,8 @@ echo.
 REM ส่ง credentials ไป server (นอก public_html)
 ssh root@119.59.102.235 "mkdir -p /home/pcj/domains/k-mkt.com/private && chmod 700 /home/pcj/domains/k-mkt.com/private"
 scp deploy.secrets root@119.59.102.235:/home/pcj/domains/k-mkt.com/private/db.env
+REM ลบ CRLF จาก Windows (มักทำให้รหัสผ่านผิด)
+ssh root@119.59.102.235 "sed -i 's/\r$//' /home/pcj/domains/k-mkt.com/private/db.env 2>/dev/null || true"
 
 REM git pull ก่อน แล้วรัน deploy script
 ssh root@119.59.102.235 "cd /home/pcj/domains/k-mkt.com/public_html && git pull origin main && bash scripts/deploy-server.sh"
