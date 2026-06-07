@@ -56,14 +56,14 @@
 
   <!-- Content Pages -->
   <url>
-    <loc>https://k-mkt.com/case-study.html</loc>
+    <loc>https://k-mkt.com/case-study.php</loc>
     <lastmod>2024-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://k-mkt.com/blog.html</loc>
+    <loc>https://k-mkt.com/blog.php</loc>
     <lastmod>2024-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

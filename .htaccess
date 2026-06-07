@@ -1,0 +1,14 @@
+# Protect local config
+<Files "config.local.php">
+    Require all denied
+</Files>
+
+# Redirect old static pages to PHP versions
+RewriteEngine On
+RewriteBase /k-mkt/
+
+RewriteRule ^blog\.html$ blog.php [R=301,L]
+RewriteRule ^case-study\.html$ case-study.php [R=301,L]
+
+# Pretty blog URLs (optional)
+RewriteRule ^blog/([a-z0-9-]+)/?$ blog-post.php?slug=$1 [L,QSA]

@@ -168,26 +168,48 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---- Form Submission ---- */
+  const apiBase = window.location.pathname.includes('/k-mkt/') ? '/k-mkt/api/submit-form.php' : '/api/submit-form.php';
+
   const forms = document.querySelectorAll('form[data-form]');
   forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
+      const formType = form.getAttribute('data-form');
+      const fd = new FormData(form);
+      const payload = { form_type: formType };
+
+      fd.forEach((val, key) => { payload[key] = val; });
+
       if (btn) {
         const orig = btn.textContent;
         btn.textContent = 'กำลังส่ง...';
         btn.disabled = true;
-        setTimeout(() => {
-          btn.textContent = '✓ ส่งข้อมูลแล้ว';
-          btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-          showToast('ขอบคุณ! ทีมงานกาญจน์ตลาดจะติดต่อกลับภายใน 24 ชั่วโมง 🙏');
-          form.reset();
-          setTimeout(() => {
+        try {
+          const res = await fetch(apiBase, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          const data = await res.json();
+          if (data.success) {
+            btn.textContent = '✓ ส่งข้อมูลแล้ว';
+            btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+            showToast(data.message || 'ขอบคุณ! ทีมงานกาญจน์ตลาดจะติดต่อกลับภายใน 24 ชั่วโมง 🙏');
+            form.reset();
+          } else {
+            showToast(data.message || 'ส่งไม่สำเร็จ กรุณาลองใหม่');
             btn.textContent = orig;
-            btn.style.background = '';
-            btn.disabled = false;
-          }, 4000);
-        }, 1500);
+          }
+        } catch (err) {
+          showToast('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง');
+          btn.textContent = orig;
+        }
+        setTimeout(() => {
+          btn.textContent = orig;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
       }
     });
   });

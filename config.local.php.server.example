@@ -1,0 +1,17 @@
+<?php
+/**
+ * ตัวอย่าง config สำหรับ VPS (k-mkt.com)
+ * คัดลอกไปเป็น config.local.php บน server เท่านั้น — อย่า commit ไฟล์จริง
+ *
+ * Database บน Server: pcj_kmkt
+ */
+return [
+    'db_host' => 'localhost',
+    'db_name' => 'pcj_kmkt',
+    'db_user' => 'pcj_kmkt',
+    'db_pass' => 'YOUR_DB_PASSWORD',
+    'db_charset' => 'utf8mb4',
+    'site_url' => 'https://k-mkt.com',
+    'upload_dir' => '/home/pcj/domains/k-mkt.com/public_html/uploads',
+    'upload_url' => '/uploads',
+];

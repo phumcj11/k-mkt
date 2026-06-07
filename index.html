@@ -83,8 +83,8 @@
         <a href="ai-marketing.html" class="nav-link">AI Marketing</a>
         <a href="seo-kanchanaburi.html" class="nav-link">SEO</a>
         <a href="google-map-marketing.html" class="nav-link">Google Map</a>
-        <a href="case-study.html" class="nav-link">ผลงาน</a>
-        <a href="blog.html" class="nav-link">บทความ</a>
+        <a href="case-study.php" class="nav-link">ผลงาน</a>
+        <a href="blog.php" class="nav-link">บทความ</a>
         <a href="contact.html" class="nav-link">ติดต่อ</a>
         <a href="free-audit.html" class="btn btn-primary magnetic" style="padding:10px 20px;font-size:0.85rem;">ตรวจสุขภาพการตลาดฟรี</a>
       </div>
@@ -105,8 +105,8 @@
   <a href="ai-marketing.html" class="mobile-nav-link">AI Marketing</a>
   <a href="seo-kanchanaburi.html" class="mobile-nav-link">SEO กาญจนบุรี</a>
   <a href="google-map-marketing.html" class="mobile-nav-link">Google Map</a>
-  <a href="case-study.html" class="mobile-nav-link">ผลงาน</a>
-  <a href="blog.html" class="mobile-nav-link">บทความ</a>
+  <a href="case-study.php" class="mobile-nav-link">ผลงาน</a>
+  <a href="blog.php" class="mobile-nav-link">บทความ</a>
   <a href="contact.html" class="mobile-nav-link">ติดต่อ</a>
   <a href="free-audit.html" class="btn btn-primary" style="margin-top:16px;">ตรวจสุขภาพการตลาดฟรี</a>
 </div>
@@ -535,7 +535,7 @@
     </div>
 
     <div style="text-align:center;margin-top:40px;">
-      <a href="case-study.html" class="btn btn-outline magnetic">ดู Case Study ทั้งหมด →</a>
+      <a href="case-study.php" class="btn btn-outline magnetic">ดู Case Study ทั้งหมด →</a>
     </div>
   </div>
 </section>
@@ -719,11 +719,11 @@
           <form data-form="audit" style="display:flex;flex-direction:column;gap:16px;">
             <div>
               <label class="form-label">ชื่อธุรกิจ *</label>
-              <input type="text" class="form-input" placeholder="เช่น รีสอร์ทแม่น้ำแคว" required>
+              <input type="text" name="business_name" class="form-input" placeholder="เช่น รีสอร์ทแม่น้ำแคว" required>
             </div>
             <div>
               <label class="form-label">ประเภทธุรกิจ</label>
-              <select class="form-input" style="cursor:pointer;">
+              <select name="business_type" class="form-input" style="cursor:pointer;">
                 <option value="" class="section-alt">เลือกประเภทธุรกิจ</option>
                 <option value="resort" class="section-alt">รีสอร์ท / โรงแรม</option>
                 <option value="raft" class="section-alt">แพ / ที่พักริมน้ำ</option>
@@ -736,19 +736,19 @@
             </div>
             <div>
               <label class="form-label">เว็บไซต์ (ถ้ามี)</label>
-              <input type="url" class="form-input" placeholder="https://yourwebsite.com">
+              <input type="url" name="website" class="form-input" placeholder="https://yourwebsite.com">
             </div>
             <div>
               <label class="form-label">Facebook Page</label>
-              <input type="text" class="form-input" placeholder="facebook.com/yourpage">
+              <input type="text" name="facebook" class="form-input" placeholder="facebook.com/yourpage">
             </div>
             <div>
               <label class="form-label">Google Map URL</label>
-              <input type="text" class="form-input" placeholder="maps.app.goo.gl/...">
+              <input type="text" name="google_map" class="form-input" placeholder="maps.app.goo.gl/...">
             </div>
             <div>
               <label class="form-label">เบอร์โทรติดต่อ *</label>
-              <input type="tel" class="form-input" placeholder="08X-XXX-XXXX" required>
+              <input type="tel" name="phone" class="form-input" placeholder="08X-XXX-XXXX" required>
             </div>
             <button type="submit" class="btn btn-primary w-full" style="justify-content:center;font-size:1rem;padding:16px;">
               🔍 ขอรับรายงานฟรี
@@ -769,7 +769,7 @@
       <p class="text-muted" style="max-width:500px;margin:0 auto 40px;line-height:1.8;">ไม่ต้องรอ ไม่ต้องตัดสินใจก่อน คุยกับทีมเราได้เลย เราพร้อมให้คำแนะนำโดยไม่มีภาระผูกพัน</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
         <a href="contact.html" class="btn btn-primary magnetic" style="font-size:1rem;padding:16px 36px;">📞 ติดต่อเรา</a>
-        <a href="https://line.me/kmkt" class="btn magnetic" style="background:#06C755;color:white;font-size:1rem;padding:16px 36px;">💚 LINE: @k-mkt</a>
+        <a href="https://line.me/kmkt" data-contact-href="line_url" class="btn magnetic" style="background:#06C755;color:white;font-size:1rem;padding:16px 36px;">💚 LINE: <span data-contact="line_id" data-contact-text>@k-mkt</span></a>
         <a href="free-audit.html" class="btn btn-outline magnetic" style="font-size:1rem;padding:16px 36px;">🔍 ตรวจสุขภาพฟรี</a>
       </div>
     </div>
@@ -804,13 +804,13 @@
 
       <div>
         <h4 style="font-weight:700;margin-bottom:20px;color:var(--gold);">เพิ่มเติม</h4>
-        <a href="case-study.html" class="footer-link">Case Study</a>
-        <a href="blog.html" class="footer-link">บทความ</a>
+        <a href="case-study.php" class="footer-link">Case Study</a>
+        <a href="blog.php" class="footer-link">บทความ</a>
         <a href="free-audit.html" class="footer-link">ตรวจสุขภาพฟรี</a>
         <a href="contact.html" class="footer-link">ติดต่อเรา</a>
         <div style="margin-top:24px;padding:16px;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.15);border-radius:10px;">
           <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:4px;">ติดต่อด่วน</div>
-          <div style="font-weight:700;color:var(--gold);">LINE: @k-mkt</div>
+          <div style="font-weight:700;color:var(--gold);">LINE: <span data-contact="line_id" data-contact-text>@k-mkt</span></div>
         </div>
       </div>
     </div>
@@ -829,13 +829,13 @@
 
 <!-- Floating Contact Bar -->
 <div id="floating-bar">
-  <a href="tel:+66819007895" class="float-btn float-phone" title="โทรหาเรา">
+  <a href="tel:+66819007895" data-contact-href="phone_tel" class="float-btn float-phone" title="โทรหาเรา">
     📞
     <span class="tooltip">โทรหาเรา</span>
   </a>
-  <a href="https://line.me/kmkt" target="_blank" class="float-btn float-line" title="LINE">
+  <a href="https://line.me/kmkt" data-contact-href="line_url" target="_blank" class="float-btn float-line" title="LINE">
     💬
-    <span class="tooltip">LINE: @k-mkt</span>
+    <span class="tooltip">LINE: <span data-contact="line_id" data-contact-text>@k-mkt</span></span>
   </a>
   <a href="https://www.facebook.com/kmkt" target="_blank" class="float-btn float-fb" title="Facebook">
     f
@@ -856,6 +856,7 @@
 <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="assets/js/seo.js"></script>
+<script src="assets/js/settings.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/animations.js"></script>
 </body>

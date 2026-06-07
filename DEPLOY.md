@@ -291,6 +291,78 @@ git branch
 
 ---
 
+## 11. ระบบหลังบ้าน PHP + MySQL
+
+### 11.1 Local (XAMPP)
+
+1. สร้าง Database ใน phpMyAdmin ชื่อ `k_mkt`
+2. Import ไฟล์:
+   - `database/schema.sql`
+   - `database/seed.sql`
+3. คัดลอก config:
+   ```bash
+   copy config.local.php.example config.local.php
+   ```
+4. แก้ `config.local.php` ให้ตรงกับ MySQL local
+5. เข้า Admin: `http://localhost/k-mkt/admin/`
+   - Username: `admin`
+   - Password: `admin123` (เปลี่ยนทันทีหลัง login)
+
+### 11.2 VPS (DirectAdmin) — Deploy อัตโนมัติ
+
+**Database บน Server:** `pcj_kmkt` (user: `pcj_kmkt`)
+
+#### ครั้งแรก (setup 1 นาที)
+
+1. สร้าง MySQL Database `pcj_kmkt` + User `pcj_kmkt` ใน DirectAdmin
+2. รัน `scripts\init-deploy-secrets.bat` — ใส่รหัสผ่าน MySQL
+3. กด `deploy.bat` — จะ push code + สร้าง config + import DB + seed อัตโนมัติ
+
+#### ครั้งถัดไป
+
+กด **`deploy.bat`** อย่างเดียว — commit, push, deploy ครบ
+
+`deploy.bat` จะทำให้อัตโนมัติ:
+- Push ขึ้น GitHub
+- ส่ง `deploy.secrets` → server `private/db.env`
+- `git pull` + สร้าง `config.local.php`
+- รัน `schema.sql` + `seed.sql` (ถ้ายังไม่มี admin)
+- ตั้ง permission `uploads/`
+
+#### Manual config (ถ้าไม่ใช้ deploy.bat)
+
+3. สร้าง `config.local.php` บน server (ไม่ push ขึ้น Git) — หรือคัดลอกจาก `config.local.php.server.example`:
+   ```php
+   return [
+       'db_host' => 'localhost',
+       'db_name' => 'pcj_kmkt',
+       'db_user' => 'pcj_kmkt',
+       'db_pass' => 'YOUR_PASSWORD',
+       'site_url' => 'https://k-mkt.com',
+       'upload_dir' => '/home/pcj/domains/k-mkt.com/public_html/uploads',
+       'upload_url' => '/uploads',
+   ];
+   ```
+4. ตั้ง permission:
+   ```bash
+   chmod 755 uploads/
+   chmod 644 config.local.php
+   ```
+
+### 11.3 หน้าที่จัดการได้จาก Admin
+
+| URL | ฟีเจอร์ |
+|-----|---------|
+| `/admin/` | Login |
+| `/admin/blog/` | จัดการบทความ |
+| `/admin/cases/` | จัดการผลงาน Case Study |
+| `/admin/settings.php` | เบอร์โทร, LINE, Email |
+| `/admin/submissions.php` | ฟอร์มจากลูกค้า |
+
+หน้าบ้าน dynamic: `blog.php`, `blog-post.php`, `case-study.php`
+
+---
+
 ## Contact & Support
 
 หากมีปัญหาในการ Deploy:  

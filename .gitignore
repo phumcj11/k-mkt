@@ -1,6 +1,11 @@
 node_modules/
 .env
 .env.local
+config.local.php
+deploy.secrets
+uploads/*
+!uploads/.gitkeep
+!uploads/.htaccess
 .DS_Store
 Thumbs.db
 .vscode/

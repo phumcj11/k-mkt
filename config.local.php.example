@@ -1,0 +1,20 @@
+<?php
+/**
+ * ตัวอย่าง config สำหรับ Local (XAMPP)
+ * คัดลอกเป็น config.local.php แล้วแก้ค่าให้ตรงกับเครื่อง
+ *
+ * Local DB:  k_mkt
+ * Server DB: pcj_kmkt  → ดู config.local.php.server.example
+ *
+ * อย่า commit config.local.php ขึ้น Git
+ */
+return [
+    'db_host' => 'localhost',
+    'db_name' => 'k_mkt',
+    'db_user' => 'root',
+    'db_pass' => '',
+    'db_charset' => 'utf8mb4',
+    'site_url' => 'http://localhost/k-mkt',
+    'upload_dir' => __DIR__ . '/uploads',
+    'upload_url' => '/k-mkt/uploads',
+];
