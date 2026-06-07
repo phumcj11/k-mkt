@@ -56,12 +56,12 @@ git commit -m "seo: ปรับ Meta Tags ทุกหน้า"
 ### 3.1 SSH เข้า Server
 
 ```bash
-ssh pcj@119.59.102.235
+ssh root@119.59.102.235
 ```
 
 ถ้าใช้ SSH Key:
 ```bash
-ssh -i ~/.ssh/id_rsa pcj@119.59.102.235
+ssh -i ~/.ssh/id_rsa root@119.59.102.235
 ```
 
 ---
@@ -103,7 +103,7 @@ git clone https://github.com/phumcj11/k-mkt.git .
 
 ```bash
 # SSH เข้า Server
-ssh pcj@119.59.102.235
+ssh root@119.59.102.235
 
 # ไปที่ public_html
 cd /domains/k-mkt.com/public_html
@@ -144,7 +144,7 @@ tar -czf backup_$(date +%Y%m%d).tar.gz /domains/k-mkt.com/public_html
 
 ```bash
 # Step 1: SSH
-ssh pcj@119.59.102.235
+ssh root@119.59.102.235
 
 # Step 2: Backup
 cd /domains/k-mkt.com
@@ -218,13 +218,13 @@ git checkout abc1234 -- .  # ย้อนไปยัง commit นั้น
 
 ## 9. DirectAdmin Notes
 
-**Server:** pcj@119.59.102.235
+**Server:** root@119.59.102.235
 
 ```
 โฟลเดอร์หลัก: /domains/k-mkt.com/public_html
 GitHub Repo:   https://github.com/phumcj11/k-mkt.git
 Server IP:     119.59.102.235
-SSH User:      pcj
+SSH User:      root
 ```
 
 ถ้า Domain ยังไม่ชี้ DNS:
@@ -253,7 +253,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_HOST }}      # 119.59.102.235
-          username: ${{ secrets.SERVER_USER }}  # pcj
+          username: ${{ secrets.SERVER_USER }}  # root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /domains/k-mkt.com/public_html
