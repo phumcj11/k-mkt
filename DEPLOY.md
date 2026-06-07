@@ -70,12 +70,12 @@ ssh -i ~/.ssh/id_rsa pcj@119.59.102.235
 
 ```bash
 # โฟลเดอร์หลัก
-/home/pcj/domains/k-mkt.com/public_html
+/domains/k-mkt.com/public_html
 ```
 
 ตรวจสอบ:
 ```bash
-ls /home/pcj/domains/k-mkt.com/public_html
+ls /domains/k-mkt.com/public_html
 ```
 
 ---
@@ -84,7 +84,7 @@ ls /home/pcj/domains/k-mkt.com/public_html
 
 ```bash
 # ไปที่โฟลเดอร์ domain
-cd /home/pcj/domains/k-mkt.com
+cd /domains/k-mkt.com
 
 # Backup public_html เดิม (ถ้ามี)
 mv public_html public_html_backup_$(date +%Y%m%d_%H%M%S)
@@ -106,7 +106,7 @@ git clone https://github.com/phumcj11/k-mkt.git .
 ssh pcj@119.59.102.235
 
 # ไปที่ public_html
-cd /home/pcj/domains/k-mkt.com/public_html
+cd /domains/k-mkt.com/public_html
 
 # ตรวจสอบสถานะ
 git status
@@ -131,11 +131,11 @@ find . -type f -exec chmod 644 {} \;
 
 ```bash
 # Backup โฟลเดอร์ก่อน Pull
-cp -r /home/USERNAME/domains/k-mkt.com/public_html \
-      /home/USERNAME/domains/k-mkt.com/public_html_backup_$(date +%Y%m%d_%H%M%S)
+cp -r /domains/k-mkt.com/public_html \
+      /domains/k-mkt.com/public_html_backup_$(date +%Y%m%d_%H%M%S)
 
 # หรือ Backup เฉพาะไฟล์สำคัญ
-tar -czf backup_$(date +%Y%m%d).tar.gz /home/USERNAME/domains/k-mkt.com/public_html
+tar -czf backup_$(date +%Y%m%d).tar.gz /domains/k-mkt.com/public_html
 ```
 
 ---
@@ -147,7 +147,7 @@ tar -czf backup_$(date +%Y%m%d).tar.gz /home/USERNAME/domains/k-mkt.com/public_h
 ssh pcj@119.59.102.235
 
 # Step 2: Backup
-cd /home/pcj/domains/k-mkt.com
+cd /domains/k-mkt.com
 tar -czf backup_$(date +%Y%m%d_%H%M%S).tar.gz public_html
 
 # Step 3: Pull
@@ -177,7 +177,7 @@ git push origin main
 
 ### ย้อนกลับจาก Backup
 ```bash
-cd /home/USERNAME/domains/k-mkt.com
+cd /domains/k-mkt.com
 rm -rf public_html
 cp -r public_html_backup_YYYYMMDD_HHMMSS public_html
 ```
@@ -196,11 +196,10 @@ git checkout abc1234 -- .  # ย้อนไปยัง commit นั้น
 
 | Type | Name | Value | TTL |
 |------|------|-------|-----|
-| A | @ | YOUR_VPS_IP | 3600 |
-| A | www | YOUR_VPS_IP | 3600 |
-| CNAME | www | k-mkt.com | 3600 |
+| A | @ | 119.59.102.235 | 3600 |
+| A | www | 119.59.102.235 | 3600 |
 
-> ตรวจสอบ IP ของ VPS ใน DirectAdmin → Server → Show Server Information
+> IP ของ VPS คือ **119.59.102.235**
 
 ---
 
@@ -219,15 +218,18 @@ git checkout abc1234 -- .  # ย้อนไปยัง commit นั้น
 
 ## 9. DirectAdmin Notes
 
+**Server:** pcj@119.59.102.235
+
 ```
-โฟลเดอร์หลัก: /home/pcj/domains/k-mkt.com/public_html
-Log Files:     /home/pcj/logs/
-Error Log:     /home/pcj/logs/error.log
+โฟลเดอร์หลัก: /domains/k-mkt.com/public_html
+GitHub Repo:   https://github.com/phumcj11/k-mkt.git
+Server IP:     119.59.102.235
+SSH User:      pcj
 ```
 
 ถ้า Domain ยังไม่ชี้ DNS:
-- A Record ชี้ไปที่ IP VPS
-- www เป็น CNAME ไปที่ k-mkt.com
+- A Record `@` ชี้ไป `119.59.102.235`
+- A Record `www` ชี้ไป `119.59.102.235`
 - รอ DNS Propagation 15 นาที - 48 ชั่วโมง
 
 ---
@@ -254,7 +256,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}  # pcj
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/pcj/domains/k-mkt.com/public_html
+            cd /domains/k-mkt.com/public_html
             git pull origin main
             find . -type d -exec chmod 755 {} \;
             find . -type f -exec chmod 644 {} \;
