@@ -1043,6 +1043,10 @@ body:has(button:hover) #cursor-dot { transform: translate(-50%,-50%) scale(2.5);
 .data-table {
   width: 100%;
   border-collapse: collapse;
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
 }
 
 .data-table th {
@@ -1057,12 +1061,12 @@ body:has(button:hover) #cursor-dot { transform: translate(-50%,-50%) scale(2.5);
 
 .data-table td {
   padding: 14px 20px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid var(--border);
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.8);
+  color: var(--text);
 }
 
-.data-table tr:hover td { background: rgba(255,255,255,0.02); }
+.data-table tr:hover td { background: var(--bg-warm); }
 
 /* ---- Scroll Indicator ---- */
 .scroll-indicator {
