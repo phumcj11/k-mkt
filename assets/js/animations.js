@@ -159,18 +159,22 @@ function initCardReveal() {
     const cards = container.querySelectorAll('.service-card, .industry-card, .blog-card, .zone-card, .case-card-inner, .step-card');
     if (!cards.length) return;
 
-    gsap.from(cards, {
-      opacity: 0,
-      y: 50,
-      duration: 0.7,
-      stagger: 0.12,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: container,
-        start: 'top 85%',
-        toggleActions: 'play none none none',
+    gsap.fromTo(cards,
+      { y: 40 },
+      {
+        y: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: 'power3.out',
+        clearProps: 'transform',
+        scrollTrigger: {
+          trigger: container,
+          start: 'top 92%',
+          toggleActions: 'play none none none',
+          once: true,
+        }
       }
-    });
+    );
   });
 }
 
@@ -461,5 +465,11 @@ window.addEventListener('load', () => {
     initImageReveal();
     initZoneCards();
     initBgShift();
+    ScrollTrigger.refresh();
   }, 100);
+
+  // หน้าย่อยไม่มี loading screen — รีเฟรช trigger อีกครั้ง
+  if (!document.getElementById('loading-screen')) {
+    setTimeout(() => ScrollTrigger.refresh(), 500);
+  }
 });

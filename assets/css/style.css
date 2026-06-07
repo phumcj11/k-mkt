@@ -547,6 +547,7 @@ body:has(button:hover) #cursor-dot { transform: translate(-50%,-50%) scale(2.5);
   position: relative;
   overflow: hidden;
   box-shadow: var(--card-shadow);
+  color: var(--text);
 }
 
 .service-card::before {
@@ -959,6 +960,38 @@ body:has(button:hover) #cursor-dot { transform: translate(-50%,-50%) scale(2.5);
 .reveal-right { opacity: 0; transform: translateX(40px); }
 .reveal-scale { opacity: 0; transform: scale(0.9); }
 
+/* Fallback: แสดงเนื้อหาเสมอถ้า JS ไม่ทำงาน */
+.no-js .reveal-up, .no-js .reveal-scale,
+.no-js .reveal-left, .no-js .reveal-right { opacity: 1; transform: none; }
+
+.service-card,
+.industry-card,
+.blog-card,
+.zone-card,
+.highlight-box {
+  opacity: 1;
+}
+
+.service-card h3,
+.industry-card h3,
+.zone-card h3,
+.faq-question,
+.headline-lg,
+.headline-md,
+.headline-xl {
+  color: var(--navy);
+}
+
+.highlight-box > div:not(.counter-value) {
+  color: var(--text-muted) !important;
+}
+
+.counter-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
 /* ---- Floating AI Elements ---- */
 .float-ai-tag {
   display: inline-flex;
@@ -1308,6 +1341,45 @@ body:has(button:hover) #cursor-dot { transform: translate(-50%,-50%) scale(2.5);
 
 .service-card.has-img { padding: 0; overflow: hidden; }
 .service-card.has-img .card-body { padding: 24px 32px 32px; }
+
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s;
+  text-decoration: none;
+  box-shadow: var(--card-shadow);
+}
+
+.contact-card:hover {
+  border-color: rgba(212,175,55,0.3);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.case-feature {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: var(--card-shadow);
+}
+
+.case-feature .case-content {
+  padding: 48px;
+  border-right: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .case-feature .case-content {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
 
 .industry-card .industry-img {
   width: 100%;
